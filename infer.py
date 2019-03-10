@@ -72,10 +72,14 @@ def matcher(item_list):
             match_type_dict['email'].append(item)
         elif validator.ipv4(item):
             match_type_dict['ipv4'].append(item)
+        elif validator.ipv6(item):
+            match_type_dict['ipv6'].append(item)
         elif validator.id_card15(item):
             match_type_dict['id_card15'].append(item)
         elif validator.id_card18(item):
             match_type_dict['id_card18'].append(item)
+        elif validator.cn_telphone(item):
+            match_type_dict['cn_telphone'].append(item)
         else:
             match_type_dict['unknown'].append(item)
     most_percent = 0.0
